@@ -1,0 +1,49 @@
+@page
+@model Fontsname.Pages_Difffonts.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Difffonts</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Difffonts.Title" class="control-label"></label>
+                <input asp-for="Difffonts.Title" class="form-control" />
+                <span asp-validation-for="Difffonts.Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Difffonts.weight" class="control-label"></label>
+                <input asp-for="Difffonts.weight" class="form-control" />
+                <span asp-validation-for="Difffonts.weight" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Difffonts.cornerrounding" class="control-label"></label>
+                <input asp-for="Difffonts.cornerrounding" class="form-control" />
+                <span asp-validation-for="Difffonts.cornerrounding" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Difffonts.Price" class="control-label"></label>
+                <input asp-for="Difffonts.Price" class="form-control" />
+                <span asp-validation-for="Difffonts.Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,43 @@
+@page
+@model Fontsname.Pages_Difffonts.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Difffonts</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Difffonts.Title)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Difffonts.Title)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Difffonts.weight)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Difffonts.weight)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Difffonts.cornerrounding)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Difffonts.cornerrounding)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Difffonts.Price)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Difffonts.Price)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Difffonts.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

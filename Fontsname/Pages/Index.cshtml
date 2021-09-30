@@ -1,0 +1,120 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Fonts page";
+}
+<div class="text-center">
+<h1>Fonts</h1>
+<p>The current time on the server is @DateTime.Now </P>
+</div>
+
+@{
+    var fontstype = new [] {
+        new {
+            ID = 1,
+            name = "ALGERIAN",
+            weight = "solid black",
+            cornerrounding = "subtle",
+            price = 39,
+            ReleaseDate = 1998
+        },
+    
+        new {
+            ID = 2,
+            name = "Calibri",
+            weight = "bold",
+            cornerrounding = "subtle",
+            price = 30,
+            ReleaseDate = 2007
+            
+
+        },
+        new {
+            ID = 3,
+            name = "Garamond",
+            weight = "regular and semi bold",
+            cornerrounding = "clear stroke",
+            price = 35,
+            ReleaseDate = 1956
+            
+        },
+        new {
+            ID = 4,
+            name = "Cambria",
+            weight = "bold-italic",
+            cornerrounding = "soft flowing cruve",
+            price = 49,
+            ReleaseDate = 2007
+        },
+        new {
+            ID = 5,
+            name = "mordern no. 20",
+            weight = "light-weight",
+            cornerrounding = "curve",
+            price = 26,
+            ReleaseDate = 1905
+        }
+
+    };
+}
+<!-- @for (var i = 0; i<fontstype.Length; i++)
+{
+    var type = fontstype[i];
+    <text>font name: @type.name<br></text>
+    <text>font cornerrounding: @type.cornerrounding<br></text>
+    <text>font weight: @type.weight<br></text>
+    <text> font price: @type.price<br></text>
+    <text> font ReleaseDate : @type.ReleaseDate<br></text>
+    <text><a asp-page="./Details" asp-route-id="@type.ID">Details</a></text>
+} -->
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Font Name
+            </th>
+            <th>
+                Font Cornerrounding
+            </th>
+            <th>
+                Weight
+            </th>
+            <th>
+                Price
+            </th>
+            <th>
+                Release Date
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@for (var i = 0; i < fontstype.Length; i++) {
+        var type = fontstype[i];
+        <tr>
+            <td>
+                <text>@type.name<br></text>
+            </td>
+            <td>
+                <text>@type.cornerrounding<br></text>
+            </td>
+            <td>
+                <text>@type.weight<br></text>
+            </td>
+            <td>
+                <text>@type.price<br></text>
+            </td>
+            <td>
+                <text>@type.ReleaseDate<br></text>
+            </td>
+            <td>
+                <a asp-page="./Difffonts/Details" asp-route-id="@type.ID">Details</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+<div class="text-center">
+    <h1 class="display-4"></h1>
+    <p>Hello World!</p>
+</div>
