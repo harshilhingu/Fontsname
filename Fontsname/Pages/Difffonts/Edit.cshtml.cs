@@ -12,9 +12,9 @@ namespace Fontsname.Pages_Difffonts
 {
     public class EditModel : PageModel
     {
-        private readonly FontsnameDifffontsContext _context;
+        private readonly Fontsname.Data.FontsnameDifffontsContext _context;
 
-        public EditModel(FontsnameDifffontsContext context)
+        public EditModel(Fontsname.Data.FontsnameDifffontsContext context)
         {
             _context = context;
         }

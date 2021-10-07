@@ -11,9 +11,9 @@ namespace Fontsname.Pages_Difffonts
 {
     public class DetailsModel : PageModel
     {
-        private readonly FontsnameDifffontsContext _context;
+        private readonly Fontsname.Data.FontsnameDifffontsContext _context;
 
-        public DetailsModel(FontsnameDifffontsContext context)
+        public DetailsModel(Fontsname.Data.FontsnameDifffontsContext context)
         {
             _context = context;
         }

@@ -11,9 +11,9 @@ namespace Fontsname.Pages_Difffonts
 {
     public class DeleteModel : PageModel
     {
-        private readonly FontsnameDifffontsContext _context;
+        private readonly Fontsname.Data.FontsnameDifffontsContext _context;
 
-        public DeleteModel(FontsnameDifffontsContext context)
+        public DeleteModel(Fontsname.Data.FontsnameDifffontsContext context)
         {
             _context = context;
         }
